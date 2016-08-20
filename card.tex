@@ -1,5 +1,6 @@
 \documentclass[a4paper,9pt,oneside,landscape]{memoir}
 \usepackage{fontspec}
+\usepackage{xcolor}
 \usepackage[newdimens]{labels}
 %\usepackage{dejavu}
 %\setmainfont[Numbers={OldStyle,Monospaced}]{Brill}
@@ -36,18 +37,19 @@
     {%
     \raggedright%
     ~ \\[9ex]
-    {\Huge \scshape Igor Zhirkov}\\[1ex]
-    \hfill{\small researcher writer programmer} \\[4ex]
+    \hfill{\Huge \scshape Igor Zhirkov}\\[1ex]
+   \hfill{\small researcher writer programmer} \\[4ex]
     \hfill{\small École des Mines de Nantes} \\
     \hfill{\small ITMO University} \\[6ex]
-    \hfill{\small 134, route de Carquefou} \\
-    \hfill{\small 44470 Carquefou France} \\
+    \hfill{\small 134 route de Carquefou} \\
+    \hfill{\small 44470 Carquefou} \\
+    \hfill{\small France} \\
     \vspace{4ex}%
     \hrule%
     \vspace{4ex}%
-    \hfill{\small \texttt{\phonei}}\\%
-    \hfill{\small \texttt{\phoneii}}\\[2ex]%
-    \hfill{\small\texttt{\emaili}}\\%
+    {\small \texttt{\phoneii}}\\
+    {\small \texttt{\phonei}}\\[2ex]%
+    {\small\texttt{\emaili}}\\%
     }%
 }
 \end{document}
