@@ -1,15 +1,9 @@
 \documentclass[a4paper,9pt,oneside,landscape]{memoir}
 \usepackage{fontspec}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[newdimens]{labels}
+\usepackage{pagecolor}
 %\usepackage{dejavu}
-%\setmainfont[Numbers={OldStyle,Monospaced}]{Brill}
-%\setsansfont{Source Sans Pro Light}
-
-%\usepackage[urw-garamond]{mathdesign}
-
-\usepackage{DejaVuSansMono}
-\usepackage{helvet}
 
 \LabelCols=5%
 \LabelRows=2%
@@ -26,30 +20,45 @@
 \numberoflabels=10 % 10
 \LabelGridtrue%  <-- or \LabelGridfalse
 \newcommand{\phonei}{+7 921 767 20 52}
-\newcommand{\phoneii}{+33 06 47 21 54 55}
+\newcommand{\phoneii}{06 47 21 54 55}
 \newcommand{\emaili}{igorjirkov@gmail.com}
-%
-%\setmainfont[Ligatures=TeX,Color=black]{Helvetica Neue Light}
-%\setsansfont[<font features>]{<name of font>} % sets the sans font
-%\setmonofont[<font features>]{<name of font>} % sets the monospace font
+\newfontfamily\lmodern{Latin Modern Roman}
+%\setmainfont[Ligatures=TeX]{Nimbus Sans L}
+%\setmainfont[Ligatures=TeX]{EB Garamond}
+%\setsansfont[Ligatures=TeX]{Nimbus Sans L} % sets the sans font
+%\setmonofont{Bera Sans Mono} % sets the monospace font
+\setmonofont{Inconsolata}
+%\setmainfont{Merriweather Light}
+%\setmainfont{Playfair Display}
+\setmainfont{Roboto Light}
+\definecolor{aurometalsaurus}{rgb}{0.43, 0.5, 0.5}
+\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
+\pagecolor{anti-flashwhite}
+
+%\setsansfont{Source Sans Pro Light}
+\def\lm{\fontspec{Latin Modern Roman}}
 \begin{document}
 \addresslabel[\fboxsep=5mm]{%
     {%
     \raggedright%
-    ~ \\[9ex]
-    \hfill{\Huge \scshape Igor Zhirkov}\\[1ex]
-   \hfill{\small researcher writer programmer} \\[4ex]
-    \hfill{\small École des Mines de Nantes} \\
-    \hfill{\small ITMO University} \\[6ex]
-    \hfill{\small 134 route de Carquefou} \\
-    \hfill{\small 44470 Carquefou} \\
+    ~ \\[6ex]
+    \hfill{\Huge \fontspec{Playfair Display} \scshape Igor Zhirkov}\\[1ex]
+    \hfill{\small \textcolor{aurometalsaurus}{ \lm researcher writer programmer}} \\[3ex]
+    %\hfill{\small École des Mines de Nantes} \\
+    \hfill{\small École de Mines de Nantes} \\
+    \hfill{\small \textsc{itmo} university} \\[3ex]
+    %\hfill{\small \textsc{itmo} University} \\[4ex]
+    \textcolor{aurometalsaurus}{
+        \hfill{\small 134 {route de Carquefou}} \\
+    \hfill{\small 44470 {Carquefou}} \\
     \hfill{\small France} \\
-    \vspace{4ex}%
+}
+    \vspace{5ex}%
     \hrule%
-    \vspace{4ex}%
-    {\small \texttt{\phoneii}}\\
-    {\small \texttt{\phonei}}\\[2ex]%
-    {\small\texttt{\emaili}}\\%
+    \vspace{3ex}%
+    { \hspace{1pt} {\phoneii}}\\[1ex]
+    %{{\phonei}}\\[2ex]%
+    { \hspace{1pt} \small \fontspec{Roboto Light} {\emaili} \hfill {\textcolor{BrickRed}{ \rule{8pt}{8pt}}}}\\%
     }%
 }
 \end{document}
